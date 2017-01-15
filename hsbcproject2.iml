@@ -156,5 +156,7 @@
     <orderEntry type="library" name="Maven: com.chuusai:shapeless_2.10.4:2.0.0" level="project" />
     <orderEntry type="library" name="Maven: org.jpmml:pmml-model:1.2.15" level="project" />
     <orderEntry type="library" name="Maven: org.jpmml:pmml-schema:1.2.15" level="project" />
+    <orderEntry type="library" name="Maven: org.igniterealtime.smack:smack:3.2.1" level="project" />
+    <orderEntry type="library" name="Maven: org.igniterealtime.smack:smackx:3.2.1" level="project" />
   </component>
 </module>
