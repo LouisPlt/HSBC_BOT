@@ -14,7 +14,9 @@ public final class Main {
         /**Create HSBCSparkInstance from json of intents**/
         ObjectMapper mapper = new ObjectMapper();
         HSBCSparkInstance sparkInstance = mapper.readValue(new File("files/intents.json"), HSBCSparkInstance.class);
+
         sparkInstance.learnAndCreateModel();
-        HSBCJabberClientInstance jabberInstance = new HSBCJabberClientInstance(sparkInstance,"bot", "1234");
+        
+        HSBCJabberClientInstance jabberInstance = new HSBCJabberClientInstance(sparkInstance,"hsbcbotanswer", "1234");
     }
 }
