@@ -26,8 +26,8 @@ public class Intent implements Serializable{
         String response;
         switch (label.intValue()){
             case 0 :    response =  "Pour avoir une carte appeller l'accueil."; break;
-            case 1 :    response =  "Pour prendre des congÃ©s rendez-vous sur le CRM hhtps://hcbc-interne.com"; break;
-            case 2 :    response =  "Pour recruter un stagiaire prednre contct avec le pole RH."; break;
+            case 1 :    response =  "Pour prendre des congés rendez-vous sur le CRM https://hcbc-interne.com"; break;
+            case 2 :    response =  "Pour recruter un stagiaire prendre contact avec le pole RH."; break;
             default :   response = "Nothing matches"; break;
         }
         return response;

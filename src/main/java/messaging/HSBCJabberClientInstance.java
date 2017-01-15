@@ -19,7 +19,7 @@ public class HSBCJabberClientInstance {
 		users.put("username", botUsername);
 		users.put("password", botPassword);
 
-		String hostnameJabberServer = "127.0.0.1";
+		String hostnameJabberServer = "ec2-52-90-48-82.compute-1.amazonaws.com";
 		int portJabberClientToServer = 5222;
 
 		XMPPManager xmppManager = new XMPPManager(hostnameJabberServer, portJabberClientToServer);
