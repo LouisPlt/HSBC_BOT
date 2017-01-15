@@ -9,11 +9,7 @@ public class HSBCJabberClientInstance {
 
 	private String botUsername;
 	private String botPassword;
-	/**
-	 * Server Configuration:
-	 * Server HostName = benoit
-	 * Default Server Resource = /Smack
-	 */
+
 	public HSBCJabberClientInstance(HSBCSparkInstance sparkInstance, String _botUserName, String _botPassword) throws Exception
 	{
 		botUsername = _botUserName;
