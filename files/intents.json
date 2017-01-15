@@ -1,0 +1,30 @@
+{
+  "intents": [
+    {
+      "label": 0,
+      "utterances": [
+        "Comment prendre des congés ?",
+        "Quel est la procédure pour obtenir des congés payés?",
+        "Comment je peux prendre un congé?"
+      ],
+      "response": "Pour prendre des congés rendez-vous sur le CRM hhtps://hcbc-interne.com"
+    },
+    {
+      "label": 1,
+      "utterances": [
+        "Comment obtenir un badge ?",
+        "Quel procedure pour une nouvelle carte ?"
+      ],
+      "response": "Pour avoir une carte appeller l'accueil."
+    },
+    {
+      "label": 2,
+      "utterances": [
+        "Comment embaucher un stagiaire ?",
+        "Procedure d'embauche d'un stagiaire ?",
+        "Quel est la procédure pour embaucher un stagiaire ?"
+      ],
+      "response": "Pour recruter un stagiaire prendre contct avec le pole RH."
+    }
+  ]
+}

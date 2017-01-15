@@ -1,5 +1,7 @@
 package ml;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
@@ -9,7 +11,6 @@ import org.apache.spark.mllib.feature.HashingTF;
 import org.apache.spark.mllib.linalg.Vector;
 import org.apache.spark.mllib.regression.LabeledPoint;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -23,25 +24,30 @@ public class HSBCSparkInstance {
     private final HashingTF tf = new HashingTF(100);
 
     private List<Intent> intents ;
+
     private JavaRDD<LabeledPoint> trainingData;
     private LogisticRegressionModel model;
     private JavaSparkContext sparkContext;
 
-    public HSBCSparkInstance(){
+    /**Create HSBCSparkInstance object from intents.json file**/
+    @JsonCreator
+    public HSBCSparkInstance(@JsonProperty("intents") List<Intent> intents){
+        this.intents = intents;
+
         SparkConf sparkConf = new SparkConf().setAppName(APP_NAME);
         sparkConf.setMaster(MASTER_URL);
         System.out.println("Launch app: "+APP_NAME+" on "+MASTER_URL);
-        intents = new ArrayList<Intent>();
         sparkContext = new JavaSparkContext(sparkConf);
+
+        transformIntentsToPoints();
+
     }
 
-    /**Add intent data to instance**/
-    public void addIntent(Intent intent){
-        Double label = intents.size()*1.0;
-        intent.transform_to_points(tf, sparkContext, label);
-        intents.add(intent);
-        System.out.println("Intent with label "+label+" added.");
-    }
+   public void transformIntentsToPoints(){
+       for(Intent intent : intents){
+           intent.transformToPoints(tf, sparkContext);
+       }
+   }
 
     /** Use data from intents to learn and generate a model **/
     public void learnAndCreateModel(){
@@ -61,12 +67,17 @@ public class HSBCSparkInstance {
     }
 
     public Double predict(String question){
-        Vector qestionAsVector = tf.transform(Arrays.asList(question.split(" ")));
-        return model.predict(qestionAsVector);
+        Vector questionAsVector = tf.transform(Arrays.asList(question.split(" ")));
+        return model.predict(questionAsVector);
     }
 
     public String findResponse(String question){
-        return Intent.getResponse(predict(question));
+        int label = predict(question).intValue();
+        for(Intent intent : intents){
+            if(intent.getLabel() == label)
+                return intent.getResponse();
+        }
+        return "Je n'ai aucune réponse à vous fournir.";
     }
 
     /**Getters**/
@@ -77,4 +88,9 @@ public class HSBCSparkInstance {
     public HashingTF getTf(){
         return tf;
     }
+
+    public List<Intent> getIntents() {
+        return intents;
+    }
+
 }
