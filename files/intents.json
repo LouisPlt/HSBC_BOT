@@ -3,28 +3,265 @@
     {
       "label": 0,
       "utterances": [
-        "Comment prendre des congés ?",
-        "Quel est la procédure pour obtenir des congés payés?",
-        "Comment je peux prendre un congé?"
+        "Congé parternité",
+        "Comment prendre un congé paternité ?",
+        "Comment faire pour avoir un congé paternité ?",
+        "Où remettre la demande de congé paternité ?"
       ],
-      "response": "Pour prendre des congés rendez-vous sur le CRM hhtps://hcbc-interne.com"
+      "response": "Pour déclarer un congé parternité, il faut remplir le document ''Demande de congé paternité'' et le retourner au département des congés."
     },
     {
       "label": 1,
       "utterances": [
-        "Comment obtenir un badge ?",
-        "Quel procedure pour une nouvelle carte ?"
+        "Congé maternité",
+        "Congé d'adoption",
+        "Comment déclarer un congé maternité ?",
+        "Comment faire pour avoir un congé maternité ?",
+        "Où remettre la demande de congé maternité ?"
       ],
-      "response": "Pour avoir une carte appeller l'accueil."
+      "response": "Pour déclarer un congé de maternité ou d'adoption, il faut remplir le document ''Demande de congé naissance ou adoption'' et le retourner au département des congés."
     },
     {
       "label": 2,
       "utterances": [
-        "Comment embaucher un stagiaire ?",
-        "Procedure d'embauche d'un stagiaire ?",
-        "Quel est la procédure pour embaucher un stagiaire ?"
+        "Congé parental d'éducation",
+        "Comment prendre un congé parental d'éducation ?",
+        "Comment déclarer un congé parental d'éducation ?",
+        "Où remettre la demande de congé parental d'éducation ?"
       ],
-      "response": "Pour recruter un stagiaire prendre contct avec le pole RH."
+      "response": "Pour déclarer un congé parental d'éducation, il faut remplir le document ''Choix de congés suite à la maternité ou l'adoption'' et le retourner au département des congés."
+    },
+    {
+      "label": 3,
+      "utterances": [
+        "Congé sans solde",
+        "Comment prendre un congé sans solde hors congé parental ?",
+        "Comment déclarer un congé sans solde ? ",
+        "Où remettre la demande de congé sans solde ?"
+      ],
+      "response": "Pour déclarer un congé sans solde hors congé parental, il faut remplir le document '''' et le retourner ."
+    },
+    {
+      "label": 4,
+      "utterances": [
+        "Arrêt de travail",
+        "Comment déclarer un arrêt de travail ?",
+        "Où remettre la déclaration de maladie ?",
+        "Arrêt pour maladie"
+      ],
+      "response": "Pour effectuer une demande de congé parternité, il faut remplir le document '''' et le retourner ."
+    },
+    {
+      "label": 5,
+      "utterances": [
+        "Reprise de travail",
+        "Comment déclarer un reprise de travail après un congés maladie ?",
+        "Où remettre le document de reprise de travail",
+        "Déclarer un reprise après un arrêt"
+      ],
+      "response": "Pour effectuer une demande de congé parternité, il faut remplir le document '''' et le retourner ."
+    },
+    {
+      "label": 6,
+      "utterances": [
+        "Absences",
+        "Comment régulariser ses absences ? ",
+        "Que faire en cas d'absences ?",
+        "Où remettre la demande de regularisation d'absences ?"
+      ],
+      "response": "Pour effectuer une demande de congé parternité, il faut remplir le document ''Régularisation rétroactive des absences'' et le retourner au département des congés."
+    },
+    {
+      "label": 7,
+      "utterances": [
+        "Comment obtenir une demande de recrutement d'alternant ?",
+        "Alternance ",
+        "Où remettre la demande de recrutement d'alternant ?"
+      ],
+      "response": "Pour effectuer une demande de recrutement d'alternant, il faut remplir le document ''Demande de recrutement ALTERNANT'' et le retourner au département des recrutements."
+    },
+    {
+      "label": 8,
+      "utterances": [
+        "Obtenir une demande de recrutement CDD",
+        "Où remettre la demande de recrutement de CDD ?"
+      ],
+      "response": "Il existe deux demandes de CDD. La première est la Demande de recrutement CDD de remplacement et la deuxième est la Demande de recrutement CDD Sucroit D'activité. Les deux sont à retourner au département des recrutements."
+    },
+    {
+      "label": 9,
+      "utterances": [
+        "Obtenir une demande de recrutement mobilité",
+        "Demande de mobilité",
+        "Où remettre la demande de mobilité ?"
+      ],
+      "response": "Pour effectuer une demande de recrutement de mobilité, il faut remplir le document ''Demande de recrutement CDI ou mobilité'' et le retourner au département des recrutements."
+    },
+    {
+      "label": 10,
+      "utterances": [
+        "Obtenir une demande de recrutement CDI",
+        "CDI",
+        "Où remettre la demande de recrutement de CDI ?"
+      ],
+      "response": "Pour effectuer une demande de recrutement de CDI, il faut remplir le document ''Demande de recrutement CDI ou mobilité'' et le retourner au département des recrutements."
+    },
+    {
+      "label": 11,
+      "utterances": [
+        "Comment obtenir une demande de recrutement d'un stagiaire ?",
+        "Stagiaire",
+        "Où remettre la demande de recrutement d'un stagiaire ?"
+      ],
+      "response": "Pour effectuer une demande de recrutement de stagiaire, il faut remplir le document ''Demande de recrutement Stages'' et le retourner au département des recrutements."
+    },
+    {
+      "label": 12,
+      "utterances": [
+        "Comment obtenir une demande d'acompte ?",
+        "Acompte",
+        "Où remettre la demande d'acompte ?"
+      ],
+      "response": "Pour effectuer une demande d'acompte, il faut remplir le document ''Demande d'acompte'' et le retourner à la comptabilité."
+    },
+    {
+      "label": 13,
+      "utterances": [
+        "Obtenir des chèques vacances",
+        "Chèque vacances",
+        "Chèque vacances conditions générales"
+      ],
+      "response": "Pour connaître les conditions et obtenir vos chèques vacances, il faut remplir le document ''Plan d'acquisition de chèques vacances''. Il faut ensuite le retourner au CE."
+    },
+    {
+      "label": 14,
+      "utterances": [
+        "Obtenir allocation enfant handicapé",
+        "Allocation",
+        "Enfant handicapé"
+      ],
+      "response": "Pour effectuer une demande d'allocation pour enfant handicapé, il faut remplir le document ''Allocation enfant handicapé'' et le retourner à la comptabilité."
+    },
+    {
+      "label": 15,
+      "utterances": [
+        "Comment obtenir une indémnité de frais de garde d'enfants ?",
+        "Garde d'enfants",
+        "Où remettre la demande d'indmnité de garde d'enfants ?",
+        "Quels sont les indemnité de frais de garde d'enfants ?"
+      ],
+      "response": "Il y a deux catégorie d'indemnité, suivant le niveau d'étude de l'enfant. Les documents concernés sont ''Indemnité de frais de garde pour les enfants du CP jusqu'a l'entrée 6ème'' et ''Indemnité de frais de garde pour les enfants jusuqu'au CP''. Vous avez également le droit à une indemnité de rentrée scolaire, en remplissant ce document ''Indemnité de rentrée scolaire''. Ces documents sont à retourner à la comptabilité."
+    },
+    {
+      "label": 16,
+      "utterances": [
+        "Comment obtenir des indemnité journalière de sécurité sociale ?",
+        "Sécurité sociale",
+        "A qui donner la demande d'indemnité de sécurité sociale ?"
+      ],
+      "response": "Pour effectuer une demande d'indemnité de sécurité sociale, il faut remplir le document ''Indemnité journalière de sécurité sociale '' et le retourner à la comptabilité."
+    },
+    {
+      "label": 17,
+      "utterances": [
+        "Comment transférer le 13ème mois dans CET",
+        "Treizième mois",
+        "Transfert 13eme mois"
+      ],
+      "response": "Pour savoir comment tranferer le 13 ème mois dans CET, il faut se référer au document suivant, ''Transfert du 13 ème mois vers le CET''."
+    },
+    {
+      "label": 18,
+      "utterances": [
+        "Demander une indémnité de transport suite à une formation",
+        "Indmnité transport formation",
+        "A qui donner la demande d'indemnité de transport de formation ?"
+      ],
+      "response": "Pour effectuer une demande d'indemnité suite à une formation, il faut remplir le document ''Indemnité de temps de transport suite à formation'' et le retourner à la comptabilité."
+    },
+    {
+      "label": 19,
+      "utterances": [
+        "Quelle sont les médailles du travail ?",
+        "Médailles de travail",
+        "Comment obtenir une médaille de travail ?"
+      ],
+      "response": "Pour tout savoir sur les médailles du travail, il faut se référer au document suivant, ''Médailles de travail et primes''."
+    },
+    {
+      "label": 20,
+      "utterances": [
+        "Comment modifier mes coordonnées bancaires ?",
+        "Modifier coordonnées bancaires",
+        "A qui dois-je m'adresser pour modifier mes coordonnées bancaires ?"
+      ],
+      "response": "Pour effectuer un changement de coordonnées bancaire, il faut remplir le document ''Déclaration de coordonnées bancaires'' et le retourner au département bancaire."
+    },
+    {
+      "label": 21,
+      "utterances": [
+        "Comment obtenir la prime de naissance",
+        "Prime de naissance",
+        "Où avoir la prime de naissance"
+      ],
+      "response": "Pour tout savoir sur la prime de naissance, il faut se référer au document suivant, ''Prime de naissance''."
+    },
+    {
+      "label": 22,
+      "utterances": [
+        "Comment se faire rembourser des frais de transport",
+        "Frais de transport",
+        "Remboursement de frais de transports Paris IDF",
+        "Remboursement de frais de transports Province"
+      ],
+      "response": "Il y a plusieurs catégories. Les documents sont ''Indemnité de frais de transport comprenant des frais de transports IDF et province'', ''Indemnité de frais de transport Ile de France'', ''Indemnité de frais de transport Province'' et ''Indemité de transport Province - Vehicule Personnel''. Il faut ensuite retourner le document au département des transports.\""
+    },
+    {
+      "label": 23,
+      "utterances": [
+        "Comment fonctionnent les CFCS ?",
+        "Obtenir un guide retraite",
+        "Comment racheter ses trimestres",
+        "Obtenir un simulateur CFCS"
+      ],
+      "response": "Pour toute demande lié au départ à la retraite ou aux congé de fin de carrière, il faut se référer au document ''Départ à la retraite''."
+    },
+    {
+      "label": 24,
+      "utterances": [
+        "Heures supplémentaires",
+        "Comment déclarer ses heures supplémentaires ?",
+        "Où déclarer ses heures supplémentaires ?"
+      ],
+      "response": "Pour déclarer vos heures supplémentaires, il faut remplir le document ''Déclaration d'heures supplémentaires'' et le retourner au département des heures supp."
+    },
+    {
+      "label": 25,
+      "utterances": [
+        "Télétravail",
+        "Comment fonctionne le télétravail ?"
+      ],
+      "response": "Vous trouverez toutes les informations sur le télétravail dans le document ''Télétravail''."
+    },
+    {
+      "label": 26,
+      "utterances": [
+        "Comment passer à un temps partiel ?",
+        "Temps partiel",
+        "Retour à temps plein",
+        "Commet retourner à un temps plein ?",
+        "A qui s'adresser pour les demande de temps partiel ?"
+      ],
+      "response": "Pour obtenir un temps partiel il faut remplir le document suivant ''Temps partiel hors congé parental'' et le retourner au département des temps. Il faut également préparer le document ''Retour à un temps plein'' afin de faciliter votre retour."
+    },
+    {
+      "label": 27,
+      "utterances": [
+        "Travail exceptionnel",
+        "Commenter déclarer un travail exceptionnel ?",
+        "A qui adresser les déclaration de travail exceptionnel ?"
+      ],
+      "response": "Pour déclarer un travail exceptionnel, il faut remplir le document suivant ''Déclaration de travail exceptionnel'' et le retourner au département des travaux."
     }
   ]
 }
