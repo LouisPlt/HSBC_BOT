@@ -24,7 +24,7 @@ public class Intent implements Serializable{
 
     @JsonCreator
     public Intent( @JsonProperty("label") int label, @JsonProperty("response") String response, @JsonProperty("utterances") List<String> utterances){
-        this.label = label;
+        this.label = label - 1;
         this.response = response;
         this.utterances = utterances;
     }

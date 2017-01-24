@@ -30,7 +30,7 @@ public class HSBCSparkInstance {
     private LogisticRegressionModel model;
     private JavaSparkContext sparkContext;
 
-    /**Create HSBCSparkInstance object from intents.json file**/
+    /**Create HSBCSparkInstance object from database retrieved through the API**/
     @JsonCreator
     public HSBCSparkInstance(@JsonProperty("intents") List<Intent> intents){
         this.intents = intents;
@@ -75,8 +75,10 @@ public class HSBCSparkInstance {
     public String findResponse(String question){
         int label = predict(question).intValue();
         for(Intent intent : intents){
-            if(intent.getLabel() == label)
+            if(intent.getLabel() == label){
+                System.out.println(label+"is the response");
                 return intent.getResponse();
+            }
         }
         return "Je n'ai aucune réponse à vous fournir.";
     }
