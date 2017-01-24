@@ -1,19 +1,25 @@
 package main;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import data.APIConnector;
+import io.netty.handler.codec.http.HttpResponse;
 import messaging.HSBCJabberClientInstance;
 import ml.HSBCSparkInstance;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 
 
 public final class Main {
 
     public static void main(String[] args) throws Exception {
 
-        /**Create HSBCSparkInstance from json of intents**/
         ObjectMapper mapper = new ObjectMapper();
-        HSBCSparkInstance sparkInstance = mapper.readValue(new File("files/intents.json"), HSBCSparkInstance.class);
+        HSBCSparkInstance sparkInstance = mapper.readValue(APIConnector.getAllIntents(), HSBCSparkInstance.class);
 
         sparkInstance.learnAndCreateModel();
         

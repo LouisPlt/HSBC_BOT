@@ -7,6 +7,7 @@ import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.mllib.classification.LogisticRegressionModel;
 import org.apache.spark.mllib.classification.LogisticRegressionWithLBFGS;
+import org.apache.spark.mllib.evaluation.MulticlassMetrics;
 import org.apache.spark.mllib.feature.HashingTF;
 import org.apache.spark.mllib.linalg.Vector;
 import org.apache.spark.mllib.regression.LabeledPoint;

@@ -262,6 +262,23 @@
         "A qui adresser les déclaration de travail exceptionnel ?"
       ],
       "response": "Pour déclarer un travail exceptionnel, il faut remplir le document suivant ''Déclaration de travail exceptionnel'' et le retourner au département des travaux."
+    },
+    {
+      "label": 27,
+      "utterances": [
+        "Bonjour",
+        "Salut",
+        "Yo"
+      ],
+      "response": "Bonjour. Comment puis-je vous aidez ?"
+    },
+    {
+      "label": 27,
+      "utterances": [
+        "Ca va ?",
+        "Comment vas tu ?"
+      ],
+      "response": "Je vais bien et vous ?"
     }
   ]
 }

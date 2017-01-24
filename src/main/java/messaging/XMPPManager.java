@@ -87,7 +87,7 @@ public class XMPPManager {
 	}
 
 	public void sendMessage(String message, String buddyJID) throws XMPPException {
-		System.out.println(String.format("Sending mesage '%1$s' to user %2$s", message, buddyJID));
+		//System.out.println(String.format("Sending mesage '%1$s' to user %2$s", message, buddyJID));
 		Chat chat = chatManager.createChat(buddyJID, messageListener);
 		chat.sendMessage(message);
 	}
@@ -110,7 +110,7 @@ public class XMPPManager {
 						{
 							try
 							{
-								System.out.println(sparkInstance.findResponse(message.getBody()));
+								//System.out.println(sparkInstance.findResponse(message.getBody()));
 								sendMessage(sparkInstance.findResponse(message.getBody()), chat.getParticipant());
 							}
 							catch (XMPPException e)
@@ -125,7 +125,7 @@ public class XMPPManager {
 	}
 
 	public void createEntry(String user, String name) throws Exception {
-		System.out.println(String.format("Creating entry for buddy '%1$s' with name %2$s", user, name));
+		//System.out.println(String.format("Creating entry for buddy '%1$s' with name %2$s", user, name));
 		Roster roster = connection.getRoster();
 		roster.createEntry(user, name, null);
 	}
