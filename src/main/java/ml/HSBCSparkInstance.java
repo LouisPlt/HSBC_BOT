@@ -7,12 +7,13 @@ import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.mllib.classification.LogisticRegressionModel;
 import org.apache.spark.mllib.classification.LogisticRegressionWithLBFGS;
-import org.apache.spark.mllib.evaluation.MulticlassMetrics;
 import org.apache.spark.mllib.feature.HashingTF;
 import org.apache.spark.mllib.linalg.Vector;
 import org.apache.spark.mllib.regression.LabeledPoint;
 
+import java.io.IOException;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -29,6 +30,8 @@ public class HSBCSparkInstance {
     private JavaRDD<LabeledPoint> trainingData;
     private LogisticRegressionModel model;
     private JavaSparkContext sparkContext;
+
+    private HashMap<String, Response> responseManager = new HashMap<String, Response>();
 
     /**Create HSBCSparkInstance object from database retrieved through the API**/
     @JsonCreator
@@ -67,23 +70,43 @@ public class HSBCSparkInstance {
         System.out.println("Model created");
     }
 
-    public Double predict(String question){
+    private Double predict(String question){
         Vector questionAsVector = tf.transform(Arrays.asList(question.split(" ")));
         return model.predict(questionAsVector);
     }
 
-    public String findResponse(String question){
+    public String findResponse(String question, String username) throws IOException {
         int label = predict(question).intValue();
         for(Intent intent : intents){
             if(intent.getLabel() == label){
-                System.out.println(label+"is the response");
+                String response = intent.getResponse();
+                if(intent.getIsFeedbackIntentNo() || intent.getIsFeedbackIntentYes()){
+                    Response previousResponse = responseManager.get(username);
+                    if(previousResponse == null)
+                        return "C'est gentil de me répondre, mais je n'ai posé aucune question";
+                    else{
+                        previousResponse.setCorrect(intent.getIsFeedbackIntentYes());
+                        previousResponse.save();
+                    }
+                }
+                else{
+                    if(responseManager.containsKey(username))
+                        responseManager.remove(username);
+                    responseManager.put(username, new Response(question, response));
+                }
+
                 return intent.getResponse();
             }
         }
         return "Je n'ai aucune réponse à vous fournir.";
     }
 
+    public HashMap<String, Response> getResponseManager() {
+        return responseManager;
+    }
+
     /**Getters**/
+
     public LogisticRegressionModel getModel(){
         return model;
     }

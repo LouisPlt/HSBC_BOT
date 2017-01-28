@@ -7,6 +7,7 @@ import org.jivesoftware.smack.packet.Message;
 import org.jivesoftware.smack.packet.Presence;
 import org.jivesoftware.smack.packet.Presence.Type;
 
+import java.io.IOException;
 import java.util.Collection;
 
 
@@ -111,13 +112,20 @@ public class XMPPManager {
 							try
 							{
 								//System.out.println(sparkInstance.findResponse(message.getBody()));
-								sendMessage(sparkInstance.findResponse(message.getBody()), chat.getParticipant());
+                                String response =  sparkInstance.findResponse(message.getBody(), chat.getParticipant());
+								sendMessage(response, chat.getParticipant());
+								if(sparkInstance.getResponseManager().get(chat.getParticipant()).getCorrect() == null)
+									sendMessage("Est-ce que ma réponse vous satisfait ?", chat.getParticipant());
+
+
 							}
 							catch (XMPPException e)
 							{
 								e.printStackTrace();
-							}
-						}
+							} catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                        }
 					}
 				});
 			}

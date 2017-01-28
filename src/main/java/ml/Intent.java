@@ -7,6 +7,7 @@ import org.apache.spark.api.java.function.Function;
 import org.apache.spark.mllib.feature.HashingTF;
 import org.apache.spark.mllib.regression.LabeledPoint;
 
+import javax.xml.bind.SchemaOutputResolver;
 import java.io.Serializable;
 import java.util.Arrays;
 import java.util.List;
@@ -19,14 +20,23 @@ public class Intent implements Serializable{
     private int label;
     private List<String> utterances;
     private String response;
+    private Boolean isFeedbackIntentYes;
+    private Boolean isFeedbackIntentNo;
 
     private JavaRDD<LabeledPoint> rdd;
 
     @JsonCreator
-    public Intent( @JsonProperty("label") int label, @JsonProperty("response") String response, @JsonProperty("utterances") List<String> utterances){
+    public Intent( @JsonProperty("label") int label,
+                   @JsonProperty("response") String response,
+                   @JsonProperty("feedback_no") Boolean isFeedbackIntentNo,
+                   @JsonProperty("feedback_yes") Boolean isFeedbackIntentYes,
+                   @JsonProperty("utterances") List<String> utterances){
+        System.out.println("NEW INTENT, LABEL:" + label +" RESPONCE: "+ response);
         this.label = label - 1;
         this.response = response;
         this.utterances = utterances;
+        this.isFeedbackIntentNo = isFeedbackIntentNo;
+        this.isFeedbackIntentYes = isFeedbackIntentYes;
     }
 
     /** Each question is split into words, and each word is mapped to one feature.
@@ -68,5 +78,21 @@ public class Intent implements Serializable{
 
     public void setResponse(String response) {
         this.response = response;
+    }
+
+    public Boolean getIsFeedbackIntentYes() {
+        return isFeedbackIntentYes;
+    }
+
+    public void setIsFeedbackIntentYes(Boolean isFeedbackIntentYes) {
+        this.isFeedbackIntentYes = isFeedbackIntentYes;
+    }
+
+    public Boolean getIsFeedbackIntentNo() {
+        return isFeedbackIntentNo;
+    }
+
+    public void setIsFeedbackIntentNo(Boolean isFeedbackIntentNo) {
+        this.isFeedbackIntentNo = isFeedbackIntentNo;
     }
 }
