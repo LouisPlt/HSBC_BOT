@@ -17,8 +17,6 @@ public final class Main {
         sparkInstance.learnAndCreateModel();
         
         HSBCJabberClientInstance jabberInstance = new HSBCJabberClientInstance(sparkInstance,"hsbcbotanswer", "1234");
-        /*Response r = new Response("lol", "lol1");
-        r.setCorrect(true);
-        r.save();*/
+
     }
 }

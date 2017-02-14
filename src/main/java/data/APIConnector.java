@@ -15,12 +15,12 @@ import java.net.URL;
 public class APIConnector {
 
     public static String getAllIntents() throws IOException {
-        return sendRequest("https://hsbc2.herokuapp.com/intents", "GET", null);
+        return sendRequest("https://rails-app-cloud.herokuapp.com/intents", "GET", null);
     }
 
 
     public static String createUserQuestion(String jsonInString) throws IOException {
-        return sendRequest("https://hsbc2.herokuapp.com/feedback", "POST", jsonInString);
+        return sendRequest("https://rails-app-cloud.herokuapp.com/feedback", "POST", jsonInString);
     }
 
     private static String sendRequest(String urlString, String method, String parameters ) throws IOException {
