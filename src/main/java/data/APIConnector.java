@@ -14,13 +14,15 @@ import java.net.URL;
  */
 public class APIConnector {
 
+    private final static String endpointAPI = "https://hsbc2.herokuapp.com";
+
     public static String getAllIntents() throws IOException {
-        return sendRequest("https://rails-app-cloud.herokuapp.com/intents", "GET", null);
+        return sendRequest(endpointAPI+"/intents", "GET", null);
     }
 
 
     public static String createUserQuestion(String jsonInString) throws IOException {
-        return sendRequest("https://rails-app-cloud.herokuapp.com/feedback", "POST", jsonInString);
+        return sendRequest(endpointAPI+"/feedback", "POST", jsonInString);
     }
 
     private static String sendRequest(String urlString, String method, String parameters ) throws IOException {
